@@ -1,10 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from './pages/Home'
+import Question from './pages/Question'
+import Result from './pages/Result'
+
 
 function App() {
   return (
     <div className="App">
-      Cat MBTI
+      <Routes>
+        <Routes path='/' element={<Home />} />
+        <Routes path='/question' element={<Question />} />
+        <Routes path='/result' element={<Result />} />
+      </Routes>
     </div>
   );
 }
