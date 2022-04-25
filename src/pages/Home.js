@@ -5,18 +5,22 @@ import CatImage from '../assets/cat_image.jpg'
 import Button from 'react-bootstrap/Button'
 
 const Home = () => {
+  const navigate = useNavigate()
+  const handleClickButton = () => {
+    navigate('/question')
+  }
   return (
     <Wrapper>
       <Header>예비집사 판별기</Header>
       <Contents>
         <Title>나에게 맞는 주인님은?</Title>
         <LogoImage>
-          <img src={CatImage} className="rounded-circle" width={350} height={350} />
+          <img src={CatImage} className="rounded-circle" width={350} height={350} alt="고양이 사진" />
         </LogoImage>
         <Desc className="text-primary">MBTI를 기반으로 하는 나랑 잘맞는 고양이 찾기!</Desc>
-        <Button>테스트 시작하기</Button>
+        <Button style={{ fontFamily: "SimKyungha" }} onClick={handleClickButton}>테스트 시작하기</Button>
       </Contents>
-    </Wrapper>
+    </Wrapper >
   )
 }
 
@@ -24,9 +28,11 @@ export default Home
 
 const Wrapper = styled.div`
   height: 100vh;
+  font-family: "SimKyungha";
 `
 const Header = styled.div`
   font-size: 40pt;
+  font-family: "SimKyungha";
 `
 const Contents = styled.div`
   display:flex;
@@ -37,6 +43,7 @@ const Contents = styled.div`
 const Title = styled.div`
   font-size: 30pt;
   margin-top: 40px;
+  font-family: "SimKyungha";
 `
 const LogoImage = styled.div`
   margin-top: 10px;
@@ -44,4 +51,5 @@ const LogoImage = styled.div`
 const Desc = styled.div`
   font-size: 20pt;
   margin-top: 20px;
+  font-family: "SimKyungha";
 `
