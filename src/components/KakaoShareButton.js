@@ -2,7 +2,7 @@ import React from 'react'
 import Button from 'react-bootstrap/Button'
 const { Kakao } = window
 
-const KakaoShareButton = () => {
+const KakaoShareButton = ({ data }) => {
   const url = "https://catmbti89.netlify.app/"
   const resultUrl = window.location.href
   console.log('URL', url, resultUrl)
